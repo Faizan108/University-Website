@@ -3,7 +3,7 @@
     padding:0;
 }
 .header{
-    height:100vh;
+    min-height:100vh;
     width:100%;
     background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(eduford_img/banner.png);
     background-position:center;
@@ -16,11 +16,15 @@
     justify-content:space-between;
     align-items:center;
 }
-.navbar div ul{
-    display:flex;
-    list-style: none;  
+.navbar img{
+    width:150px;
+}
+.navbar div{
+    flex:1;
+    text-align:right;  
 }
 .navbar div ul li{
+    list-style:none;
     padding:8px 12px;
     position: relative;
     display:inline-block;
@@ -72,4 +76,35 @@
     background:rgb(218, 81, 18);
     border:2px solid rgb(218, 81, 18);
     cursor:pointer;
+}
+.navbar div .fa{
+    display: none;
+}
+@media(max-width:700px)
+{
+    .text-box h1{
+        font-size:20px;
+    }
+    .text-box p{
+        margin:10px 0 40px;
+        font-size:9px;    
+    }
+    .navbar div ul li{
+        display:block;
+    }
+    .navbar div{
+        position: absolute;
+        height:100vh;
+        width:200px;
+        top:0;
+        right:0;
+        background:rgb(248, 124, 7);
+        z-index: 2;
+        text-align: left;
+    }
+    .navbar div .fa{
+        display: block;
+        color:white;
+    }
+    
 }
